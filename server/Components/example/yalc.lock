@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "mdo-react-components": {
+      "signature": "3612e15f78f65c87ee0ac8d645c067a6",
+      "file": true
+    }
+  }
+}

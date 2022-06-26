@@ -1,0 +1,54 @@
+@import "~antd/lib/style/themes/default.less";
+@import "./theme.less";
+
+//TODO: Revisit this when we have it documented in the style guide
+.ant-skeleton-with-avatar .ant-skeleton-content .ant-skeleton-title {
+  margin-top: 5px;
+}
+
+.skeleton-row-with-avatar {
+  height: 60px;
+
+  .ant-skeleton-with-avatar .ant-skeleton-content .ant-skeleton-title {
+    margin-top: 5px;
+  }
+}
+
+.ant-row.title-skeleton {
+  .ant-skeleton-title {
+    margin-top: 40px;
+  }
+
+  &.cross-icon {
+    float: right;
+    margin-right: 0px;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+}
+
+.form-skeleton {
+  &.form-skeleton-align-stepper .ant-skeleton-content {
+    @media only screen and (min-width: @screen-md-min) {
+      // Offsets skeleton to be aligned with semantic stepper
+      padding-left: 48px;
+    }
+  }
+
+  .ant-skeleton-content {
+    .ant-skeleton-title {
+      margin-top: 18px;
+      width: 20%;
+      margin-bottom: 60px;
+      height: 24px;
+    }
+
+    .ant-skeleton-paragraph {
+      margin-top: 18px;
+      li {
+        margin-bottom: 56px;
+        height: 24px;
+      }
+    }
+  }
+}

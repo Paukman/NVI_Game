@@ -1,0 +1,281 @@
+@import "styles/index.less";
+
+.account-overview-page-error {
+  h4 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+  }
+
+  @media @for-md-screen {
+    margin: 0 31px;
+  }
+
+  @media @for-sm-screen {
+    margin: 16px 22px;
+  }
+
+  @media @for-xs-screen {
+    margin: 16px 13px;
+  }
+}
+
+.account-overview-date {
+  position: relative;
+  float: right;
+  margin: 0;
+  top: -40px;
+  font-size: 14px;
+
+  @media @for-md-screen {
+    margin-right: 32px;
+  }
+
+  @media @for-sm-screen {
+    display: none;
+  }
+}
+
+.account-overview-page {
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -40px;
+
+  @media @for-sm-screen {
+    top: 0;
+  }
+
+  .overview-title {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media @for-md-screen {
+      padding-left: 32px;
+      font-size: 14px;
+    }
+
+    @media @for-sm-screen {
+      padding-left: 13px;
+      padding-top: 5px;
+    }
+  }
+
+  .totals {
+    order: 1;
+
+    @media @for-sm-screen {
+      order: 2;
+    }
+  }
+
+  .summary {
+    order: 2;
+
+    @media @for-sm-screen {
+      order: 1;
+    }
+  }
+
+  .account-overview .ant-list-item {
+    padding-top: 8px;
+    padding-bottom: 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .totals .ant-list-item {
+    padding-top: 4px;
+    padding-bottom: 0;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .ant-card-body {
+    padding: 0;
+  }
+}
+
+// Totals shared styles
+.total-cards(@color) {
+  width: 25%;
+  max-width: 25%;
+  min-height: 88px;
+  border-left: 5px solid @color;
+  margin-right: 18px;
+
+  &[class*="total"] {
+    padding: 36px 39px;
+
+    @media @for-md-screen {
+      min-height: 72px;
+      padding: 28px 27px;
+    }
+
+    @media @for-sm-screen {
+      min-height: 32px;
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 4px;
+      padding: 8px 27px 8px 24px;
+    }
+
+    @media @for-xs-screen {
+      padding: 8px 20px 8px 20px;
+    }
+  }
+
+  &[class*="total"] {
+    padding: 9px 24px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+
+    [class*="amount"] {
+      font-size: 16px;
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+    .balance {
+      display: flex;
+      flex-direction: column;
+
+      @media @for-sm-screen {
+        text-align: right;
+      }
+    }
+
+    @media @for-lg-screen {
+      padding: 9px 18px;
+      margin-right: 8px;
+    }
+
+    @media @for-md-screen {
+      min-height: 69px;
+      padding: 6px 11px;
+      font-size: 12px;
+      margin-right: 2px;
+
+      [class*="amount"] {
+        font-size: 14px;
+
+        span.currency-label {
+          font-size: 12px;
+        }
+      }
+    }
+
+    @media @for-sm-screen {
+      min-height: 32px;
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 4px;
+      padding: 8px 27px 8px 24px;
+    }
+
+    @media @for-xs-screen {
+      padding: 8px 20px 8px 20px;
+    }
+  }
+
+  .ant-card-body {
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media @for-sm-screen {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .ant-skeleton-content .ant-skeleton-title {
+    margin-top: 0;
+  }
+
+  .total-skeleton {
+    @media @for-sm-screen {
+      max-width: 120px;
+    }
+
+    @media @for-xs-screen {
+      max-width: 100%;
+    }
+  }
+
+  .total-amount-skeleton {
+    min-width: 82px;
+    max-width: 82px;
+    display: none;
+
+    @media @for-sm-screen {
+      display: table;
+    }
+
+    @media @for-xs-screen {
+      display: none;
+    }
+  }
+}
+
+.total-skeletons,
+.total-details {
+  display: flex;
+
+  @media @for-sm-screen {
+    display: block;
+  }
+
+  .deposit-card-total {
+    .total-cards(@purple);
+  }
+
+  .creditcard-card-total {
+    .total-cards(@yellow);
+  }
+
+  .prepaidcard-card-total {
+    .total-cards(@yellow);
+  }
+
+  .investment-card-total {
+    .total-cards(@light-blue);
+  }
+
+  .loan-card-total {
+    .total-cards(@gold);
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.accountListItem {
+  @media @for-md-screen {
+    padding-left: 7px;
+    padding-top: 14px;
+  }
+
+  @media @for-sm-screen {
+    padding-top: 0;
+    padding-left: 9px;
+  }
+}

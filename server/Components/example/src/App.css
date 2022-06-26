@@ -1,0 +1,23 @@
+body {
+  background-color: snow;
+  min-height: 100vh;
+}
+
+.app-logo {
+  height: 50px;
+  pointer-events: none;
+}
+
+.header {
+  padding: 5px 20px;
+  box-shadow: 0 1px 15px #eee;
+  background-color: white;
+}
+
+.page {
+  padding: 20px;
+}
+
+section > h1 {
+  font-size: 18px;
+}

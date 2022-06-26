@@ -1,0 +1,128 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/placeholders.scss";
+@import "../../styles/variables.scss";
+@import "../../styles/global.scss";
+
+#transactions-divider-mobile {
+  margin: 0;
+}
+.column-list.row {
+  padding-bottom: 0 !important;
+  padding-top: 23px !important;
+  color: $--dark-grey !important;
+  cursor: pointer;
+
+  .column-divider {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: rgba(99, 102, 106, 0.2);
+    margin-bottom: 0;
+    margin-right: 32px;
+    margin-top: 0;
+
+    @include for-mobile {
+      margin-right: 0;
+    }
+  }
+
+  .column {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    white-space: nowrap !important;
+    margin-bottom: 16.5px !important;
+    height: 24px;
+  }
+}
+.transaction.details .skeleton {
+  & > div {
+    width: 100%;
+  }
+  @include for-mobile {
+    & > div {
+      margin: 8px 19px 13px 11px;
+    }
+  }
+}
+.transaction.details {
+  color: $--black;
+
+  .details.title {
+    background-color: $--white;
+    height: 56px;
+    padding-top: 15px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-family: $font-opensans;
+    padding-left: 8px;
+    font-weight: 600;
+    color: $--dark-grey;
+  }
+
+  .transaction.date {
+    height: 34px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 0px 8px 10px;
+    background-color: $--med-grey;
+    color: $--dark-grey;
+    letter-spacing: -0.16px;
+  }
+
+  .transaction-row-pointer {
+    cursor: pointer;
+  }
+
+  .transaction.description {
+    padding: 20px 10px;
+    font-size: 14px;
+    background-color: $--white;
+    min-height: 63px;
+    letter-spacing: -0.19px;
+    line-height: 1.43;
+  }
+
+  .right.floated.five.wide.column.transaction.value {
+    text-align: right;
+    float: right;
+
+    padding-right: 0px;
+
+    @media only screen and (max-width: $break-mobile) {
+      padding-left: 0px;
+    }
+  }
+
+  #right-arrow {
+    text-align: right;
+    float: right;
+    width: 30px !important;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2px;
+
+    img.right.arrow {
+      -webkit-filter: opacity(0.1) drop-shadow(0 0 0 #63666a);
+      filter: opacity(0.1) drop-shadow(0 0 0 #63666a);
+    }
+  }
+
+  .cross-currency-row {
+    padding-top: 4px;
+  }
+
+  .green.credit {
+    color: $--light-green;
+  }
+
+  @media only screen and (max-width: $break-mobile) {
+    .nine.wide.column {
+      padding-right: 0px;
+    }
+  }
+}

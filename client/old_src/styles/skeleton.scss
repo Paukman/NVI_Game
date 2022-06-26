@@ -1,0 +1,11 @@
+@import "./variables";
+@import "./mixins";
+
+// parent doc for global skeleton loader styles
+.skeleton{
+  .react-loading-skeleton {
+    border-radius: 8px;
+    height: 16px;
+  }
+}
+

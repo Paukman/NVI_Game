@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+@import "../../styles/placeholders";
+@import "../../styles/variables";
+@import "../../styles/global";
+
+.label-details {
+  padding-top: 18px;
+
+  .ui.grid {
+    margin-left: 0px; // ui.grid semantic default is -1rem (14px)
+    margin-right: 0px; // same here
+
+    &.label-card {
+      @include for-mobile {
+        display: inline-block !important;
+        width: 100%;
+      }
+      .column {
+        padding-bottom: 6px !important;
+
+        @include for-tablet-up {
+          &.icon-grid {
+            width: 48px !important;
+          }
+        }
+      }
+      .icon-grid {
+        display: inline-block;
+        padding-right: 0px !important;
+        padding-left: 0px;
+        @include for-mobile {
+          display: inline-block !important;
+          height: 100%;
+          vertical-align: middle !important;
+        }
+        @include for-mobile {
+          max-width: 48px;
+        }
+
+        img {
+          float: left;
+          padding-right: 24px;
+          transform: translateY(30%);
+        }
+      }
+
+      .label-grid {
+        padding-left: 0px !important;
+
+        .label-title {
+          @include content($--dark-grey, 12px, 0.3px);
+          letter-spacing: normal;
+          padding-bottom: 5px;
+          margin-bottom: 0px !important;
+          margin-top: 0px !important;
+        }
+        .label-text {
+          @include content($--dark-grey, 14px, $letter-spacing-default);
+          word-break: break-all;
+        }
+      }
+      .label-text-only {
+        @include content($--dark-grey, 12px, 0.3px);
+        letter-spacing: normal;
+        padding: 0;
+      }
+    }
+  }
+
+  .review-details-message {
+    font-size: 14px;
+    color: $--dark-grey;
+    .bottom-message {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 32px;
+      span:first-child {
+        margin-bottom: 8px;
+      }
+    }
+  }
+}

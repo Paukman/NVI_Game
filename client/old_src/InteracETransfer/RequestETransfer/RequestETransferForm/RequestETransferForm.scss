@@ -1,0 +1,17 @@
+@import "styles/mixins.scss";
+@import "styles/placeholders.scss";
+@import "styles/variables.scss";
+
+.rebank-form.request-etransfer-form {
+  .error.from {
+    margin-bottom: 4px;
+  }
+  .request-arrow {
+    margin-top: -20px;
+    width: 25px;
+    img {
+      margin-top: 0px;
+      height: 40px;
+    }
+  }
+}

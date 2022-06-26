@@ -1,0 +1,59 @@
+@import '~antd/lib/style/themes/default.less';
+
+.login-brand-area-content-lg {
+    padding-top: 320px;
+    padding-left: 90px;
+    font-family: "Sentinel A", "Sentinel B";
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.22;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.login-brand-area-content-sm {
+    display: none;
+}
+
+.login-brand-area-mask {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(217deg, #71c5e8, #a25cbf);
+}
+
+.top-brand-area-content {
+    width: 100%;
+    height: 40px;
+    background-image: linear-gradient(217deg, #71c5e8, #a25cbf);
+
+}
+
+@media screen and (min-width:@screen-xl-min) {
+    .login-brand-area-content-lg {
+        padding-left: 200px;
+    }
+}
+
+
+@media screen and (max-width:@screen-lg-min) {
+    .login-brand-area-content-lg {
+        display: none;
+    }
+
+    .login-brand-area-content-sm {
+        padding-top: 63px;
+        text-align: center;
+        padding-bottom: 92px;
+        font-family: Sentinel;
+        font-size: 60px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.22;
+        letter-spacing: normal;
+        color: #ffffff;
+        display: block;
+    }
+}

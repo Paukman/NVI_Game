@@ -1,0 +1,188 @@
+@import "./placeholders";
+@import "./variables";
+@import "./mixins";
+@import "./spacers";
+@import "./placeholders.scss";
+@import "./datePicker.scss";
+@import "./snackbar.scss";
+@import "./modal.scss";
+@import "./text.scss";
+@include floats;
+@include margins-paddings;
+@include negative-margins-paddings;
+
+body {
+  background: $--light-grey;
+
+  .App {
+    overflow-x: initial;
+
+    @include for-mobile {
+      min-height: 100vh;
+    }
+
+    main {
+      font-family: $font-opensans;
+      font-style: $font-style-default;
+      font-stretch: $font-stretch-default;
+      font-weight: $font-weight-default;
+      line-height: $line-height-default;
+      letter-spacing: $letter-spacing-default;
+      color: $--black;
+      padding-bottom: 0px;
+      overflow: hidden;
+
+      &.main-container {
+        padding-top: 70px;
+
+        @include for-desktop-up {
+          margin-left: calc(100vw - 100%);
+        }
+
+        @include for-tablet {
+          padding-top: 65px;
+        }
+
+        @include for-mobile {
+          padding-top: 0px;
+        }
+      }
+
+      // TODO: Cleanup to not need .ui.segment to reference, forces usage of Segment downstream
+      .ui.segment {
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        display: inline-block;
+
+        &.purple-border {
+          @include borderLeft($--purple);
+        }
+
+        &.yellow-border {
+          @include borderLeft($--yellow);
+        }
+
+        &.gold-border {
+          @include borderLeft($--gold);
+        }
+
+        &.light-blue-border {
+          @include borderLeft($--light-blue);
+        }
+      }
+
+      .ui.card {
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+      }
+
+      section {
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-weight: $font-weight-default;
+      }
+    }
+  }
+
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  sup {
+    position: relative;
+    font-size: 40%;
+    line-height: 0;
+    vertical-align: baseline;
+    top: -1.2em;
+  }
+
+  .sidebar-container {
+    margin-top: 10px;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: space-between;
+    min-height: 550px;
+    width: 1200px;
+
+    @include for-desktop {
+      width: 965px; // aligns with ui.container for desktop
+    }
+
+    @include for-tablet {
+      width: 100%;
+    }
+
+    @include for-mobile {
+      margin-top: 0px;
+      width: 100%;
+      display: block;
+      min-height: inherit;
+      padding-bottom: 10px;
+    }
+
+    .sidebar-tabs {
+      background: white;
+      width: 400px;
+      margin-right: 20px;
+
+      @include for-desktop {
+        width: 300px;
+      }
+
+      @include for-tablet {
+        width: 33.2%;
+        margin-right: 15px;
+      }
+
+      @include for-mobile {
+        width: 100%;
+      }
+    }
+
+    .sidebar-content {
+      width: 780px;
+      background-color: white;
+
+      @include for-desktop {
+        width: 645px;
+      }
+
+      @include for-tablet {
+        width: 64.8%;
+      }
+
+      @include for-mobile {
+        width: 100%;
+      }
+    }
+
+    .edit-details-divider {
+      margin-right: 30px;
+      margin-bottom: 21px;
+    }
+  }
+
+  .react-loading-skeleton {
+    border-radius: 8px;
+    height: 16px;
+  }
+
+  .error-icon-before::before {
+    content: "\2715";
+    padding-right: 4px;
+    font-weight: 600;
+  }
+}

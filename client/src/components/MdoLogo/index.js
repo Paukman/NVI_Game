@@ -1,0 +1,1 @@
+export { MdoLogo } from './MdoLogo';

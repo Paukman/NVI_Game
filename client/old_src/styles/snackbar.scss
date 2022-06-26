@@ -1,0 +1,218 @@
+@import "styles/mixins.scss";
+@import "styles/placeholders.scss";
+@import "styles/variables.scss";
+
+// Adding Mui Snackbar styling in order to
+// make Snackbar styling available, because of
+// CSP property, <style> tag injection will fail
+.MuiSnackbarContent-root {
+  color: #fff;
+  display: flex;
+  padding: 6px 16px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  align-items: center;
+  font-weight: 400;
+  line-height: 1.43;
+  border-radius: 4px;
+  letter-spacing: 0.01071em;
+  background-color: rgb(49, 49, 49);
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbarContent-root {
+    flex-grow: initial;
+    min-width: 288px;
+  }
+}
+
+.MuiSnackbarContent-message {
+  padding: 8px 0;
+}
+
+.MuiSnackbarContent-action {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: -8px;
+  padding-left: 16px;
+}
+
+.MuiSnackbar-root {
+  left: 8px;
+  right: 8px;
+  display: flex;
+  z-index: 1400;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiSnackbar-anchorOriginTopCenter {
+  top: 8px;
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-anchorOriginTopCenter {
+    top: 24px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+
+.MuiSnackbar-anchorOriginBottomCenter {
+  bottom: 8px;
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-anchorOriginBottomCenter {
+    left: 50%;
+    right: auto;
+    bottom: 24px;
+    transform: translateX(-50%);
+  }
+}
+
+.MuiSnackbar-anchorOriginTopRight {
+  top: 8px;
+  justify-content: flex-end;
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-anchorOriginTopRight {
+    top: 24px;
+    left: auto;
+    right: 24px;
+  }
+}
+
+.MuiSnackbar-anchorOriginBottomRight {
+  bottom: 8px;
+  justify-content: flex-end;
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-anchorOriginBottomRight {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+
+.MuiSnackbar-anchorOriginTopLeft {
+  top: 8px;
+  justify-content: flex-start;
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-anchorOriginTopLeft {
+    top: 24px;
+    left: 24px;
+    right: auto;
+  }
+}
+
+.MuiSnackbar-anchorOriginBottomLeft {
+  bottom: 8px;
+  justify-content: flex-start;
+}
+
+@media (min-width: 600px) {
+  .MuiSnackbar-anchorOriginBottomLeft {
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+  }
+}
+
+.success-snackbar {
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  left: 20px !important;
+  bottom: 20px !important;
+
+  &.transition-out {
+    bottom: -100px !important;
+    transition: bottom 240ms linear;
+  }
+
+  @include for-tablet {
+    bottom: 0px !important;
+  }
+
+  @include for-mobile {
+    left: 0px !important;
+    bottom: 0px !important;
+  }
+  div {
+    width: 450px;
+    height: 48px;
+    @include for-mobile {
+      width: 320px;
+      height: 70px;
+    }
+    .snackbar-grid {
+      .checkmark-icon {
+        width: 24px;
+        height: 24px;
+      }
+      .message-grid {
+        @include for-tablet-up {
+          padding-left: 0px !important;
+        }
+
+        .snackbar-message {
+          color: $--white;
+          @include for-mobile-and-tablet {
+            font-size: 14px;
+          }
+          span {
+            color: $--white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// override the global classes
+.MuiSnackbarContent-root {
+  @include for-desktop-up {
+    height: 48px;
+  }
+}
+
+.MuiSnackbarContent-message {
+  padding-bottom: 0px;
+  margin-left: -8px;
+}
+.snackbar-content {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+  grid-template-columns: auto auto;
+  margin-right: 8px;
+  margin-left: 5px;
+  @include for-tablet-up {
+    padding-left: 0px !important;
+  }
+  .snackbar-icon {
+    width: 24px;
+    height: 24px;
+    @include for-mobile-and-tablet {
+      margin-top: 3px;
+    }
+  }
+  .snackbar-message {
+    @include for-mobile-and-tablet {
+      font-size: 14px;
+    }
+    color: $--white;
+    font-family: Open Sans !important;
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+}

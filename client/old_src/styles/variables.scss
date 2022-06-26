@@ -1,0 +1,177 @@
+//TODO: these breakpoints are being used as min/max differently in the system causing overlaps and off by 1 errors,
+// adding new breakpoints that define min/max and some helper mixins to clean things up, once things move over these
+// old breaks can be removed.
+// MEDIA BREAK POINTS
+$break-mobile: 320px;
+
+// breakpoints should be aligned with UX breakpoints
+$break-tablet: 767px;
+$break-desktop: 1023px;
+$break-widescreen: 1439px;
+
+// the defines the extents of the breakpoints, used for the mixins
+$break-mobile-max: 767px;
+$break-tablet-min: 768px;
+$break-tablet-max: 1023px;
+$break-desktop-min: 1024px;
+$break-desktop-max: 1439px;
+$break-widescreen-min: 1440px;
+
+$grey-divider-border: 1px solid rgba(34,36,38,.15);
+
+// COLORS
+$--dark-grey: #63666a;
+$--med-grey: #f8f8f8;
+$--light-grey: #eff1f1;
+$--dim-grey: #626367;
+$--ghost-grey: #bababb;
+$--slate-grey: rgba(99, 102, 106, 0.2);
+$--input-hint-grey: #8b8d90;
+
+$--white: #ffffff;
+$--black: #57585c;
+$--dark-black: rgba(0, 0, 0, 0.12);
+$--dark-grey-rgba:rgba(0, 0, 0, 0.32);
+
+$--atb-blue: #005eb8;
+$--med-blue: #009cde;
+$--light-blue: #71c5e8;
+$--button-blue: #007bff;
+$--dark-cyan-blue: #2B353D;
+
+$--purple: #9756b3;
+$--light-purple:#c39ad8;
+$--pink: #f65275;
+
+$--red: #eb0042;
+
+$--green: #008576;
+$--light-green: #1e8470;
+$--gold: #ed8b00;
+$--yellow: #f1be48;
+
+$atb-gradient: linear-gradient(217deg, #71c5e8, #a25cbf);
+
+// BORDERS
+$atb-blue-border-s: solid 1.5px #005eb8;
+$atb-blue-border-m: solid 2px #005eb8;
+
+$grey-divider-border: 1px solid rgba(34,36,38,.15);
+
+$rebank-grey-border-s: solid 1px #63666a;
+$rebank-grey-border-m: solid 2px #63666a;
+
+$default-white-border-xs: solid 0.5px #ffffff;
+$default-white-border-m: solid 2px #ffffff;
+
+$purple-left-border: solid 6px $--purple;
+$yellow-left-border: solid 6px $--yellow;
+$light-blue-left-border: solid 6px $--light-blue;
+$gold-left-border: solid 6px $--gold;
+
+// BORDER RADIUS
+$border-radius-rounded: 100px;
+$border-radius-square: 3px;
+
+// SHADOWS
+$box-shadow-light: 0 0 10px 0 rgba(0, 94, 183, 0.2);
+$box-shadow-medium: 1px 1px 2px 0 rgba(0, 0, 0, 0.15),
+  1px 4px 8px 0 rgba(0, 0, 0, 0.05);
+
+// SPACING
+$spacing-default: normal;
+$spacing-negative: -0.22px;
+$spacing-xs: 0.02px;
+$spacing-s: 0.35px;
+
+// FONTS
+$font-opensans: "Open Sans";
+
+$font-sentinel: "Sentinel";
+$font-sfprotext: "SFProText";
+
+// FONT WEIGHT
+$font-weight-default: normal;
+$font-weight-bold: bold;
+$font-weight-200: 200;
+$font-weight-300: 300;
+$font-weight-400: 400;
+$font-weight-500: 500;
+$font-weight-600: 600;
+
+// FONT STYLE
+$font-style-default: normal;
+$normal: normal;
+
+// FONT STRETCH
+$font-stretch-default: normal;
+
+// LINE HEIGHT
+$line-height-default: normal;
+
+// LETTER SPACING
+$letter-spacing-default: normal;
+$letter-spacing-47: 0.47px;
+$letter-spacing-22: 0.22px;
+
+// BUTTONS basic constants from bootstrap
+$font-size-base:              1rem !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+
+$input-btn-font-size-lg:      $font-size-lg !default;
+$input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-x-lg:      1rem !default;
+
+
+$btn-padding-y-lg:            $input-btn-padding-y-lg !default;
+$btn-padding-x-lg:            $input-btn-padding-x-lg !default;
+$btn-font-size-lg:            $input-btn-font-size-lg !default;
+$border-radius-lg:            .3rem !default;
+$btn-border-radius-lg:        $border-radius-lg !default;
+
+// rounded button
+$border-radius-lg-rounded:    1rem !default;
+$enable-rounded:              true !default;
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 2,
+    6: $spacer * 2.5,
+    7: $spacer * 3,
+    8: $spacer * 3.5,
+    9: $spacer * 4,
+    10: $spacer * 4.5
+  ),
+  $spacers
+);
+
+// Spacing negative
+$negative-spacer: -1rem !default;
+$negative-spacers: () !default;
+$negative-spacers: map-merge(
+  (
+    0: 0,
+    1: $negative-spacer * .25,
+    2: $negative-spacer * .5,
+    3: $negative-spacer,
+    4: $negative-spacer * 1.5,
+    5: $negative-spacer * 2,
+    6: $negative-spacer * 2.5,
+    7: $negative-spacer * 3,
+    8: $negative-spacer * 3.5,
+    9: $negative-spacer * 4,
+    10: $negative-spacer * 4.5
+  ),
+  $negative-spacers
+);
+
+$floats: "left","right", "none", "inherit";

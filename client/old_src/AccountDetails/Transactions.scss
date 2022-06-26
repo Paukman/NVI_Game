@@ -1,0 +1,99 @@
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+.transactions-container {
+  .ui.atb.basic.button:focus {
+    color: $--atb-blue !important;
+  }
+
+  .ui.atb.basic.button:hover {
+    color: $--atb-blue !important;
+  }
+
+  .try-again-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 40px 0;
+
+    .error-icon {
+      color: $--red;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+    span {
+      text-align: left;
+    }
+  }
+
+  .no-more {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -0.29px;
+    color: #57585c;
+
+    @include for-mobile-and-tablet {
+      font-size: 12px;
+      letter-spacing: -0.22px;
+    }
+  }
+
+  .more {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 15px;
+
+    @include for-mobile {
+      padding-top: 26px;
+      margin: -1rem;
+    }
+  }
+
+  .more.text-left {
+    text-align: left;
+    padding-top: 20px;
+  }
+  .ui.atb.basic.button {
+    color: $--atb-blue !important;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    border-radius: 100px;
+    border: solid 2px $--atb-blue;
+    min-width: 280px;
+    min-height: 42px;
+    padding: 0px;
+    margin-top: 23px;
+
+    @include for-mobile {
+      min-width: 252px;
+    }
+  }
+  .transaction-skeleton-row {
+    width: 100%;
+    padding-left: 11px;
+    padding-right: 15px;
+    padding-top: 10px;
+
+    .column-divider {
+      margin-top: 20px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-color: rgba(99, 102, 106, 0.2);
+
+      @include for-mobile {
+        width: 100%;
+      }
+    }
+    .ant-skeleton-paragraph {
+      margin-bottom: 0;
+    }
+  }
+}

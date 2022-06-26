@@ -1,0 +1,7 @@
+@import "styles/mixins.scss";
+
+.button-container {
+  @include for-tablet-up {
+    float: right;
+  }
+}

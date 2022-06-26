@@ -1,0 +1,1 @@
+export { SPCompareToSelector } from './SPCompareToSelector';

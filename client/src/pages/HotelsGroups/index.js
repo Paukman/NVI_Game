@@ -1,0 +1,1 @@
+export { HotelsGroups } from './HotelsGroups';

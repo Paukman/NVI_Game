@@ -1,0 +1,147 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.ui.dimmer.active {
+  background-color: $--dark-grey-rgba;
+}
+
+.modal {
+  min-width: 360px;
+  min-height: 155px;
+  &.height-180{
+    height: 180px;
+  }
+  &.height-200{
+    height: 200px;
+  }
+  @include for-mobile{
+    width: 90% !important;
+    overflow-x: hidden;
+  }
+  @include for-tablet-up{
+    width: 569px !important;
+  }
+  // unsure if this is necessary anymore
+  @media only screen and (max-width: $break-tablet) {
+    min-width: 280px;
+    min-height: 180px;
+    width: 80%;
+  }
+  background-color: $--white;
+
+  .content {
+    padding-top: 20px !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    padding-bottom: 15px;
+    border-radius: 4px;
+    overflow: hidden;
+    h4 {
+      font-family: $font-opensans;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.31px;
+      color: $--dark-grey;
+
+      span {
+        font-size: 22px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 7px !important;
+      font-family: $font-opensans !important;
+    }
+
+    .error-message {
+      font-family: $font-opensans;
+      font-size: 14px;
+      letter-spacing: -0.22px;
+      color: $--dark-grey;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .actions {
+    border-top: 0 !important;
+    background: $--white !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 25px !important;
+    margin-bottom: 20px;
+
+    .ui.button {
+      box-shadow: none;
+      font-family: $font-opensans;
+      font-size: 16px;
+      font-weight: 600;
+      color: $--atb-blue !important;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+  }
+
+
+  .modal-form-container {
+    padding-top: 27px;
+    padding-right: 36px;
+    padding-left: 36px;
+    font-family: $font-opensans;
+    @include for-mobile {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .modal-form-header {
+      padding-bottom: 8px;
+      @include for-mobile {
+        padding-top: 6px;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        display: inline;
+        font-size: 18px;
+        font-weight: 600;
+        color: $--dark-grey;
+        font-family: $font-opensans;
+      }
+
+      .modal-form-cross-btn {
+        float: right;
+        color: $--atb-blue;
+        @include for-mobile {
+          padding-right: 0px;
+        }
+        height: 24px !important;
+      }
+    }
+
+    .modal-form-divider {
+      margin-right: 0px;
+    }
+
+    .modal-form-divider {
+      margin-bottom: 23px;
+    }
+    // applies to all form inputs including the container for the search
+    .ui.input.full-width-input {
+      width: 100%;
+    }
+
+    .in-line-message-tall {
+      padding-top: 4px;
+      padding-bottom: 14px;
+      font-size: 10px;
+    }
+
+    .error-tall {
+      padding-bottom: 14px;
+    }
+  }
+
+}

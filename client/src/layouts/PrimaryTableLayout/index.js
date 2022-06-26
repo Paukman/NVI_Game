@@ -1,0 +1,1 @@
+export { PrimaryTableLayout } from './PrimaryTableLayout';

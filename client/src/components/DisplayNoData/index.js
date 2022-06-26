@@ -1,0 +1,1 @@
+export { DisplayNoData } from './DisplayNoData';

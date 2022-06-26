@@ -1,0 +1,1 @@
+export { useStrDefaultReport } from './useStrDefaultReport';

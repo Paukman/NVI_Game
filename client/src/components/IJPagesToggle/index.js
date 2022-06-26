@@ -1,0 +1,1 @@
+export { IJPagesToggle } from './IJPagesToggle';

@@ -1,0 +1,60 @@
+@import "styles/index.less";
+
+.ant-table-placeholder .ant-skeleton-paragraph li {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@table-head-cell: ~".ant-table thead.ant-table-thead > tr > th.ant-table-cell";
+@table-body-cell: ~".ant-table tbody.ant-table-tbody > tr.ant-table-row > td.ant-table-cell";
+
+@{table-head-cell},
+@{table-body-cell} {
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media @for-md-screen {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+@{table-head-cell} {
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  @media @for-md-screen {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .ant-table-small& {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+@{table-body-cell} {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  line-height: 24px;
+  overflow-wrap: normal;
+
+  @media @for-md-screen {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .ant-table-small& {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media @for-md-screen {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+import React, {memo} from 'react';
+
+
+const {{addEditName}} = memo(() => {
+  
+
+  return (
+    <>
+     <div>Add edit page</div>
+    </>
+  );
+});
+
+{{addEditName}}.displayName = '{{addEditName}}';
+
+export { {{addEditName}} };

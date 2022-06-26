@@ -1,0 +1,16 @@
+import React from 'react';
+
+import { {{providerName}}Provider } from 'providers';
+import { {{moduleNameCaps}}Page } from './{{moduleNameCaps}}Page';
+
+const {{moduleNameCaps}} = () => {
+  return (
+    <{{providerName}}Provider>
+      <{{moduleNameCaps}}Page />
+    </{{providerName}}Provider>
+  );
+};
+
+{{moduleNameCaps}}.displayName = '{{moduleNameCaps}}';
+
+export { {{moduleNameCaps}} };

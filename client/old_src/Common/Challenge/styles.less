@@ -1,0 +1,22 @@
+@import "~antd/lib/style/themes/default.less";
+
+.enhanced-security-modal.ant-modal.ant-modal-confirm {
+    width: 520px !important;
+    @media screen and (max-width: @screen-sm-max) {
+      width: 100% !important;
+    }
+    .ant-modal-content {
+        .ant-modal-close {
+            display: inline;
+        }
+        .ant-modal-confirm-content {
+            margin-top: 0px;
+            .success-img {
+                margin-right: 6px;
+                height: 16px;
+            }
+
+        }
+        padding-top: 18px;
+    }
+}

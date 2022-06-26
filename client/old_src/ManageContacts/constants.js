@@ -1,0 +1,3 @@
+export const NICKNAME_NAME_LENGTH = 20;
+export const ACCOUNT_NUMBER_LENGTH = 50;
+export const CREDITOR_NAME_LENGTH = 40;

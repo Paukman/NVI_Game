@@ -1,0 +1,1 @@
+export { MdoDepartmentSelector } from './MdoDepartmentSelector';

@@ -1,0 +1,1 @@
+export { CustomizableTable } from './CustomizableTable';

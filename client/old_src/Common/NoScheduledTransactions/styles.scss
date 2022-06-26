@@ -1,0 +1,51 @@
+@import "styles/variables.scss";
+@import "styles/mixins.scss";
+
+.no-scheduled-transactions {
+  border-top: 1px solid $--slate-grey;
+  margin-left: 14px;
+  margin-right: 14px;
+
+  @include for-mobile {
+    border-top: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .no-scheduled-copy {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-family: $font-opensans;
+    font-size: 16px;
+    letter-spacing: -0.29px;
+    color: $--dark-grey;
+
+    @include for-mobile {
+      margin-top: 20px;
+      height: 130px;
+    }
+  }
+
+  .no-scheduled-button {
+    cursor: pointer;
+    font-family: $font-opensans;
+    font-weight: 600;
+    font-size: 16px;
+    width: 262px;
+    height: 42px;
+    margin-top: 40px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.15), 1px 4px 8px 0 rgba(0, 0, 0, 0.05);
+    border: solid 2px $--atb-blue;
+    background: $--white;
+    color: $--atb-blue;
+    float: right;
+
+    @include for-mobile {
+      margin-top: 10px;
+      width: 100%;
+      float: none;
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "./theme.less";
+
+// this may change when we have the typography implemented
+a.ant-typography,
+.ant-typography a {
+  font-weight: 600;
+  font-size: 16px;
+}
+a.ant-typography:hover {
+  color: @primary-color;
+}
+
+h1.ant-typography,
+.ant-typography h1,
+h2.ant-typography,
+.ant-typography h2,
+h3.ant-typography,
+.ant-typography h3,
+h4.ant-typography,
+.ant-typography h4,
+h5.ant-typography,
+.ant-typography h5 {
+  font-weight: 600 !important; // will remove !important. there is a gobal h4 that is messing it up
+  font-family: @font-family; // should be no need for font-familly here
+}
+
+h1.ant-typography,
+.ant-typography h1 {
+  font-family: Sentinel;
+  font-weight: 700 !important;
+}
+
+.make-title(@htag, @font-size, @line-height) {
+  @{htag}.ant-typography,
+  .ant-typography @{htag} {
+    font-size: @font-size;
+    line-height: @line-height;
+  }
+}
+
+.make-title(h1, 60px, 72px);
+.make-title(h2, 22px, 32px);
+.make-title(h3, 20px, 28px);
+.make-title(h4, 18px, 24px);
+.make-title(h5, 16px, 24px);
+
+@media screen and (max-width: @screen-md-max) {
+  .make-title(h1, 60px, 72px);
+  .make-title(h2, 20px, 28px);
+  .make-title(h3, 18px, 24px);
+  .make-title(h4, 16px, 24px);
+  .make-title(h5, 14px, 20px);
+}
+
+@media screen and (max-width: @screen-sm-max) {
+  h1.ant-typography,
+  .ant-typography h1 {
+    display: none;
+  }
+  .make-title(h2, 18px, 24px);
+  .make-title(h3, 16px, 24px);
+  .make-title(h4, 14px, 20px);
+  .make-title(h5, 14px, 20px);
+}

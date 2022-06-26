@@ -1,0 +1,137 @@
+import { useState, useContext, useEffect } from 'react';
+import { {{replacement.hook.download}} {{replacement.hook.globals}} } from 'contexts';
+// TODO graphQL import this once available
+import { {{graphQLhook}} } from '../../../graphql';
+import { globals, usePageState } from 'hooks';
+import { pageState  {{replacement.hook.periodSelector}} {{replacement.hook.modes}} } from '../constants';
+import { prepareDataFor{{graphQL.listState}}, downloadExcelFile } from '../utils';
+import { getText } from 'utils/localesHelpers';
+import logger from 'utils/logger';
+import { formatQueryErrors } from 'utils/dataManipulation';
+import { strReplace } from 'utils/formatHelpers';
+
+export const use{{moduleNameCaps}} = () => {
+  // TODO graphQL use proper state once graphQL is available
+  const { {{graphQL.graphQLmethods}} {{graphQL.listState}} } = {{graphQLhook}}();
+  {{replacement.hook.download}} 
+  {{replacement.hook.globals}}
+  const { updatePageState } = usePageState(pageState);
+
+  const [{{moduleNameSmall}}State, updateState] = useState({
+    {{replacement.hook.group}}
+    {{replacement.hook.hotel}}
+    {{replacement.hook.date}}
+    {{replacement.hook.fromDate}}
+    {{replacement.hook.toDate}}
+    {{replacement.hook.modes}}
+    {{replacement.hook.search}}
+    {{replacement.hook.periodSelector}}
+    {{replacement.hook.portfolio}}
+    data: null,
+    errors: [],     // errors for the elements
+    queryErrors: [],  // generic errors for the page (original errors from query)
+    listData: [],
+    subHeaders: [],
+    pageState: { ...updatePageState(pageState.DEFAULT) },
+    requestReport: true,
+     {{replacement.hook.drawer}}
+  });
+
+ // this function mighe need some adjustments depending on the specific page
+ // but in 9 out 10 cases no need to change
+  const getPageState = (data, errors) => {
+    if (data?.length === 0 && !errors?.length) {
+      return pageState.NO_DATA;
+    } else if (errors?.length) {
+      return pageState.ERROR;
+    }
+    return pageState.DEFAULT;
+  };
+
+  useEffect(() => {
+    if ({{graphQL.listState}}?.data || {{graphQL.listState}}?.errors?.length) {
+      logger.debug('{{graphQL.listState}} list: ', {{graphQL.listState}});
+
+      const { subHeaders, listData, headers } = prepareDataFor{{moduleNameCaps}}({{graphQL.listState}}.data);
+
+      updateState((state) => ({
+        ...state,
+        errors: formatQueryErrors({{graphQL.listState}}?.errors),
+        queryErrors: {{graphQL.listState}}?.errors,
+        pageState: updatePageState(getPageState({{graphQL.listState}}?.data, {{graphQL.listState}}?.errors)),
+        subHeaders,
+        listData,
+        {{replacement.hook.search}}
+        headers,
+      }));
+    }
+  }, [{{graphQL.listState}}]);
+
+  const onChange = (name, value) => {
+    {{replacement.hook.globals}}
+    {{replacement.hook.portfolio}}
+    updateState((state) => ({
+      ...state,
+      [name]: value,
+      // reset message whenever we start changing any filters
+     pageState: updatePageState(pageState.DEFAULT),
+     requestReport: true,
+     }));
+  };
+
+  
+
+  const displayReport = () => {
+    // if inputs are not set
+    // TODO this might be obsolete, should be taken care of with reportRequest....
+    if (!{{moduleNameSmall}}State?.hotelId || !{{moduleNameSmall}}State?.date) {
+      updateState((state) => ({
+        ...state,
+         pageState: updatePageState(pageState.MESSAGE),
+     }));
+     return;
+    }
+
+    updateState((state) => ({
+      ...state,
+      pageState: updatePageState(pageState.LOADING),
+      listData: [],
+      requestReport: false,
+    }));
+
+// TODO uncomment this with proper function from graphQL
+//  TODO prepare graphQL data separatelly in util if needed.
+//{{moduleNameSmall}}Get({
+//      hotelId: {{moduleNameSmall}}State.hotelId,
+//      date: {{moduleNameSmall}}State.date,
+//   });
+  };
+
+  {{replacement.hook.download}} 
+
+  {{replacement.hook.upload}} 
+
+  {{replacement.hook.search}}
+
+  {{replacement.hook.edit}} 
+
+  {{replacement.hook.manualEntry}} 
+
+  {{replacement.hook.add}} 
+
+{{replacement.hook.drawer}}
+
+{{replacement.hook.extraButton1}}
+{{replacement.hook.extraButton2}}
+{{replacement.hook.extraButton3}}
+
+  return { state: {{moduleNameSmall}}State, onChange, displayReport 
+  {{replacement.hook.download}} {{replacement.hook.search}} 
+  {{replacement.hook.upload}} {{replacement.hook.edit}}
+  {{replacement.hook.manualEntry}} {{replacement.hook.portfolio}} 
+   {{replacement.hook.add}} {{replacement.hook.drawer}}
+   {{replacement.hook.extraButton1}}
+{{replacement.hook.extraButton2}}
+{{replacement.hook.extraButton3}}
+   };
+};

@@ -1,0 +1,48 @@
+@import "../../styles/mixins";
+@import "../../styles/placeholders";
+@import "../../styles/variables";
+@import "../../styles/global";
+
+.sidebar-content {
+  .review-form {
+    @include for-widescreen {
+      padding-left: 66px;
+      padding-right: 66px;
+    }
+
+    @include for-desktop {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include for-tablet {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @include for-mobile {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .label-card:nth-child(2) {
+      padding-left: 7px;
+      margin-top: -28px;
+      height: 42px;
+
+      img {
+        height: 28px;
+      }
+    }
+
+    .label-card:nth-child(3) {
+      margin-top: 8px;
+    }
+
+    .label-card:nth-child(8) {
+      img {
+        transform: translate(5%, 50%);
+      }
+    }
+  }
+}

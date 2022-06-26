@@ -1,0 +1,79 @@
+@import "styles/mixins.scss";
+@import "styles/variables.scss";
+@import "styles/placeholders.scss";
+
+
+.rebank-form.transfer-form {
+    .end-date-message {
+      padding-top: 4px;
+      padding-bottom: 11px;
+      font-size: 10px;
+    }
+    
+  }
+  
+  
+  .ui.horizontal.divider::after, .ui.horizontal.divider::before {
+    background-color: #9e9e9e;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: super;
+    background-image: none;
+  }
+  
+  .ui.horizontal.divider::before {
+    color: #9e9e9e;
+    margin: 0px 5px 0px 0px;
+    background-image: none;
+    width: .5rem;
+  }
+  
+  .ui.horizontal.divider:after {
+    color: #9e9e9e;
+    left: 5px;
+    background-image: none;
+    @include for-widescreen(){
+      width: 29rem;
+    }
+    @include for-desktop(){
+      width: 23rem;
+    }
+    @include for-tablet(){
+      width: 12rem;
+    }  
+    @include for-mobile(){
+      width: 6rem;
+    };
+  }
+  
+  .text.ui.horizontal.divider {
+    display: inline;
+    text-transform: none;
+    margin: 0.25rem 0;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    color: #63666a !important;
+    width: 100%;
+  }
+
+  .exchange-group {
+    padding-bottom: 6px;
+  }
+
+  .exchange-rate{
+    padding-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .exchange-icon{
+    margin-top: -14px;
+  }
+
+  .ui.labeled.input > .label {
+    padding: 10px !important;
+  }

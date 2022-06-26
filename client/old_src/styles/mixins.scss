@@ -1,0 +1,85 @@
+@import "./variables.scss";
+
+@mixin borderLeft($color) {
+  border-left: 5px solid $color;
+  border-top: none !important;
+  padding-bottom: 0px;
+}
+
+@mixin header($color, $font-size, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  font-family: $font-opensans;
+}
+
+@mixin content($color, $font-size, $letter-spacing) {
+  color: $color;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  font-family: $font-opensans;
+}
+
+@mixin link($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $--atb-blue;
+}
+
+@mixin for-mobile {
+  @media only screen and (max-width: $break-mobile-max) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media only screen and (min-width: $break-tablet-min) and (max-width: $break-tablet-max) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media only screen and (min-width: $break-desktop-min) and (max-width: $break-desktop-max) {
+    @content;
+  }
+}
+
+@mixin for-widescreen {
+  @media only screen and (min-width: $break-widescreen-min) {
+    @content;
+  }
+}
+
+@mixin for-tablet-and-desktop {
+  @media only screen and (min-width: $break-tablet-min) and (max-width: $break-desktop-max) {
+    @content;
+  }
+}
+
+@mixin for-tablet-up {
+  @media only screen and (min-width: $break-tablet-min) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media only screen and (min-width: $break-desktop-min) {
+    @content;
+  }
+}
+
+@mixin for-mobile-and-tablet {
+  @media only screen and (max-width: $break-tablet-max) {
+    @content;
+  }
+}
+
+@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
+  @if $enable-rounded {
+    border-radius: $radius;
+  }
+  @else if $fallback-border-radius != false {
+    border-radius: $fallback-border-radius;
+  }
+}
+

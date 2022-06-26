@@ -1,0 +1,89 @@
+@import "styles/index.less";
+
+.account-overview-page.skeleton {
+  .account-name-skeleton {
+    min-width: 340px;
+    max-width: 340px;
+
+    @media @for-xs-screen {
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  .current-balance-skeleton,
+  .available-balance-skeleton,
+  .account-detail-action-skeleton {
+    min-width: 120px;
+    max-width: 120px;
+  }
+
+  .current-balance-skeleton {
+    margin-right: 26px;
+
+    @media @for-sm-screen {
+      display: none;
+    }
+  }
+
+  .available-balance-skeleton {
+    @media @for-xs-screen {
+      display: none;
+    }
+  }
+
+  .account-overview
+    :is(.deposit-card, .loan-card, .investment-card, .creditcard-card, .prepaidcard-card) {
+    min-height: 160px;
+    width: 100%;
+    padding: 44px 113px 21px 54px;
+
+    @media @for-md-screen {
+      padding: 44px 63px 21px 32px;
+    }
+
+    @media @for-sm-screen {
+      padding: 29px 49px 15px 24px;
+    }
+
+    @media @for-xs-screen {
+      padding: 28px 27px 16px 14px;
+    }
+
+    @media @for-sm-screen {
+      min-height: 120px;
+    }
+
+    &:is(.loan-card) {
+      min-height: 104px;
+
+      @media @for-sm-screen {
+        min-height: 72px;
+      }
+    }
+
+    h4.ant-typography {
+      margin-top: 0px;
+    }
+
+    h5.ant-typography {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .ant-divider-horizontal {
+      margin-top: 45px;
+      margin-bottom: 18px;
+      border-color: @divider-grey;
+
+      @media @for-sm-screen {
+        margin-top: 27px;
+        margin-bottom: 12px;
+      }
+    }
+
+    .ant-skeleton-content .ant-skeleton-title {
+      margin-top: 0;
+    }
+  }
+}

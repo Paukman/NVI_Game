@@ -1,0 +1,69 @@
+@import "styles/mixins.scss";
+@import "styles/placeholders.scss";
+@import "styles/variables.scss";
+@import "styles/global.scss";
+
+.cross-currency-details {
+  padding: 14px 0 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: $grey-divider-border;
+
+  @include for-mobile {
+    padding: 0 0 8px;
+    border-bottom: hidden;
+  }
+
+  .cross-currency-image-wrapper {
+    background: #f8f8f8;
+    width: 251px;
+    height: 112px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    margin-left: 17px;
+    margin-right: 25px;
+
+    @include for-tablet {
+      margin-left: 11px;
+    }
+    @include for-mobile {
+      display: none;
+    }
+
+    .foreign-exchange-image {
+      width: 64px;
+      margin: 0 25px 0 24px;
+    }
+
+    .foreign-exchange-text {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .cross-currency-label-wrapper {
+    flex: 1;
+
+    @include for-mobile {
+      padding-left: 8px;
+    }
+
+    .label-details {
+      padding: 0px;
+
+      .ui.grid.label-card {
+        margin: 0;
+
+        div {
+          padding: 10px 0;
+          border: none !important;
+
+          @include for-mobile {
+            padding: 2px 0;
+          }
+        }
+      }
+    }
+  }
+}

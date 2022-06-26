@@ -1,0 +1,1 @@
+export { DownloadAsExcel } from './downloadAsExcel';

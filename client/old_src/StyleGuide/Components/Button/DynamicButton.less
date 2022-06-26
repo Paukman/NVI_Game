@@ -1,0 +1,19 @@
+.dynamic-button {
+  position: relative;
+
+  .dynamic-button--hidden {
+    visibility: hidden;
+  }
+
+  .dynamic-button__icon {
+    margin-right: 8px;
+  }
+
+  .dynamic-button__spinner,
+  &:focus .dynamic-button__spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,41 @@
+@import "styles/mixins.scss";
+@import "styles/placeholders.scss";
+@import "styles/variables.scss";
+
+.rebank-form.etransfer-form {
+  .security {
+    padding-top: 10px;
+    height: 67px;
+    img {
+      transform: translateY(-100%);
+    }
+  }
+
+  .form-label {
+    &.security-answer {
+      margin-bottom: 8px;
+    }
+    &.security-question {
+      margin-bottom: 5px !important;
+    }
+  }
+
+  .security-edit {
+    padding-bottom: 25px;
+  }
+
+  .edit-button {
+    color: $--atb-blue;
+    line-height: 32px;
+    padding: 0px;
+    background: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: $font-opensans;
+    border: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}

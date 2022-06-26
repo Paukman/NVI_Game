@@ -1,0 +1,20 @@
+import { useState, useCallback } from 'react';
+import { useLazyQuery, useMutation } from '@apollo/react-hooks';
+
+import {{{queryNameSmall}}Queries } from './queries/{{queryNameSmall}}Queries';
+import apolloClient from './apolloClient';
+import logger from '../utils/logger';
+
+export const use{{queryNameCaps}} = () => {
+{{allStates}}
+
+{{allQueryMethods}}
+{{allMutationMethods}}
+
+{{allQueryCallbacks}}
+{{allMutationCallbacks}}
+
+return {
+  {{allReturns}}
+};
+};

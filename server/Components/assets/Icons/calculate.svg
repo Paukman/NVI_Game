@@ -1,0 +1,15 @@
+<svg id="calculate_black_24dp_copy" data-name="calculate_black_24dp copy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_739" data-name="Group 739">
+    <rect id="Rectangle_71" data-name="Rectangle 71" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Group_741" data-name="Group 741">
+    <g id="Group_740" data-name="Group 740">
+      <path id="Path_86" data-name="Path 86" d="M19,3H5A2.006,2.006,0,0,0,3,5V19a2.006,2.006,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Zm0,16H5V5H19Z" fill="#fff"/>
+      <rect id="Rectangle_72" data-name="Rectangle 72" width="5" height="1.5" transform="translate(6.25 7.72)" fill="#fff"/>
+      <rect id="Rectangle_73" data-name="Rectangle 73" width="5" height="1.5" transform="translate(13 15.75)" fill="#fff"/>
+      <rect id="Rectangle_74" data-name="Rectangle 74" width="5" height="1.5" transform="translate(13 13.25)" fill="#fff"/>
+      <path id="Path_87" data-name="Path 87" d="M8,18H9.5V16h2V14.5h-2v-2H8v2H6V16H8Z" fill="#fff"/>
+      <path id="Path_88" data-name="Path 88" d="M14.09,10.95,15.5,9.54l1.41,1.41,1.06-1.06L16.56,8.47l1.41-1.41L16.91,6,15.5,7.41,14.09,6,13.03,7.06l1.41,1.41L13.03,9.89Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

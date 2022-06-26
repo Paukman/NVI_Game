@@ -1,0 +1,112 @@
+import React, { memo, useContext } from 'react';
+
+import { debounce } from 'lodash';
+
+import {
+  ToolBar,
+  ToolBarItem,
+  Toggle,
+  InputDate,
+  Button,
+  RecursiveDataTable,
+  ButtonDownloadAs,
+  Search,
+   Drawer,
+  SlideBar,
+} from 'mdo-react-components';
+import { HotelSelector, DisplayNoData, DataLoading, DisplayApiErrors , DataContainer, GroupOnlySelector, PeriodSelector, PortfolioSelector} from 'components';
+import { AppContext} from 'contexts';
+import { getText } from 'utils/localesHelpers';
+import { {{providerName}}Context } from 'providers';
+import { pageState {{replacement.mainPage.modes}} } from './constants';
+import { use{{moduleNameCaps}} } from './hooks'
+import { isDateValid } from 'utils/validators';
+{{replacement.mainPage.periodSelector}}
+
+const {{moduleNameCapsPage}} = memo(() => {
+  //const { {{moduleNameSmall}} } = useContext({{providerName}}Context);
+  //const { state, onChange, displayReport, onHandleDownload } = {{moduleNameSmall}};
+  const { appPages } = useContext(AppContext);
+  const { state, onChange {{replacement.mainPage.goButton}} {{replacement.mainPage.download}}
+   {{replacement.mainPage.upload}} {{replacement.mainPage.addNew}}
+    {{replacement.mainPage.search}} {{replacement.mainPage.buttonDropdown}}
+     {{replacement.mainPage.edit}} {{replacement.mainPage.manualEntry}} 
+     {{replacement.mainPage.portfolio}} {{replacement.mainPage.drawer}} 
+     {{replacement.mainPage.extraButton1}}
+          {{replacement.mainPage.extraButton2}}
+          {{replacement.mainPage.extraButton3}}
+     
+     } = use{{moduleNameCaps}}();
+  
+  {{replacement.mainPage.genericForm}}
+
+  return (
+    <>
+    {{replacement.mainPage.genericForm}}
+      <ToolBar>
+          {{replacement.mainPage.portfolio}}
+          {{replacement.mainPage.hotel}}
+          {{replacement.mainPage.group}}
+          {{replacement.mainPage.periodSelector}}
+          {{replacement.mainPage.fromDate}}
+          {{replacement.mainPage.toDate}}
+          {{replacement.mainPage.date}}
+          {{replacement.mainPage.year}}
+          {{replacement.mainPage.unmappedSelector}}
+          {{replacement.mainPage.goButton}}
+          {{replacement.mainPage.modes}}
+          {{replacement.mainPage.buttonDropdown}}
+      </ToolBar>
+      <ToolBar>
+          {{replacement.mainPage.search}}
+          {{replacement.mainPage.addNew}}
+          {{replacement.mainPage.manualEntry}}
+          {{replacement.mainPage.upload}}
+          {{replacement.mainPage.download}}
+          {{replacement.mainPage.edit}}
+          {{replacement.mainPage.extraButton1}}
+          {{replacement.mainPage.extraButton2}}
+          {{replacement.mainPage.extraButton3}}
+
+     
+      </ToolBar>
+      {state?.listData?.length ? (
+         <DataContainer obsoleteData={state?.requestReport}>
+          <RecursiveDataTable
+            expandCollapePlacement={-1}
+            data={[{ children: state?.listData }]}
+            subHeaders={state?.subHeaders}
+            freezeColumns={0}
+            stickyHeaders={true}
+          />
+          <>
+            {/* PaginatedDataTable
+            obsoleteData={state?.requestReport}
+            expandCollapePlacement={-1}
+            subHeaders={state?.subHeaders}
+            items={state?.listData}
+            dataIdField='id'
+            order={state?.order}
+            orderBy={state?.orderBy}
+            onRequestSort={onRequestSort}
+            freezeColumns={0}
+          stickyHeaders={true}
+          /> */}
+          </>
+        </DataContainer>
+      ) : (
+        <>
+          {state?.pageState.LOADING && <DataLoading />}
+          {state?.pageState.ERROR && <DisplayApiErrors errors={state?.queryErrors} />}
+          {state?.pageState.MESSAGE && <DisplayNoData message={state?.pageState.MESSAGE} />}
+       </>
+      )}
+
+      {{replacement.mainPage.drawer}}
+    </>
+  );
+});
+
+{{moduleNameCapsPage}}.displayName = '{{moduleNameCapsPage}}';
+
+export { {{moduleNameCapsPage}} };

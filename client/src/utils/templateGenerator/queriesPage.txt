@@ -1,0 +1,11 @@
+import gql from 'graphql-tag';
+
+{{allQueries}}
+
+{{allMutations}}
+
+const {{queryNameSmall}}Queries = {
+    {{allQueriesAndMutations}}
+};
+
+export {{{queryNameSmall}}Queries };
