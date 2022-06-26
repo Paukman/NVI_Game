@@ -1,1 +1,0 @@
-export { IconSwitch } from './IconSwitch';

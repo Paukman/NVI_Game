@@ -1,1 +1,0 @@
-export { ColumnChart } from './ColumnChart';

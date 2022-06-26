@@ -1,1 +1,0 @@
-export { KpiButtonSideBar } from './KpiButtonSideBar';

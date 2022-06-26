@@ -1,1 +1,0 @@
-export { BrandsDropdown } from './BrandsDropdown';

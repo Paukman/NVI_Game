@@ -1,1 +1,0 @@
-export { useStrDefaultReport } from './useStrDefaultReport';

@@ -1,1 +1,0 @@
-export { StrDisclaimer } from './StrDisclaimer';

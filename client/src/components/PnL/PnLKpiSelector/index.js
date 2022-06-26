@@ -1,1 +1,0 @@
-export { PnLKpiSelector } from './PnLKpiSelector';

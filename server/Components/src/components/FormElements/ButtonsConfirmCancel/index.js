@@ -1,1 +1,0 @@
-export { ButtonsConfirmCancel } from './ButtonsConfirmCancel';

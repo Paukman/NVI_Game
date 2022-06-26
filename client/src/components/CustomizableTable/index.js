@@ -1,1 +1,0 @@
-export { CustomizableTable } from './CustomizableTable';

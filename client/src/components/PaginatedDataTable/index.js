@@ -1,1 +1,0 @@
-export { PaginatedDataTable } from './PaginatedDataTable';

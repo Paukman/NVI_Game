@@ -1,1 +1,0 @@
-export { NoDataToShow } from './NoDataToShow';

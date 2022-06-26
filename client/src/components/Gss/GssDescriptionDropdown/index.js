@@ -1,1 +1,0 @@
-export { GssDescriptionDropdown } from './GssDescriptionDropdown';

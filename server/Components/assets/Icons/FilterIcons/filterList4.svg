@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g id="Filter_4" transform="translate(141.917 6953)">
-    <path id="Path_1" data-name="Path 1" d="M0,0H24V24H0Z" transform="translate(-141.917 -6953)" fill="none"/>
-    <path id="Subtraction_1" data-name="Subtraction 1" d="M-193.916-6967.133h-4v-2h4v2Zm-.938-5h-7.062v-2h5.613a6.26,6.26,0,0,0,1.448,2Zm-2-5h-8.062v-2h8.525a6.232,6.232,0,0,0-.464,2Z" transform="translate(66 32.133)"/>
-    <path id="Subtraction_8" data-name="Subtraction 8" d="M-307.65-6970.468a6.274,6.274,0,0,1-6.267-6.267A6.273,6.273,0,0,1-307.65-6983a6.272,6.272,0,0,1,6.265,6.266A6.273,6.273,0,0,1-307.65-6970.468Zm-.012-4.7v1.036h1.032v-1.036h.6v-.82h-.6v-3.141h-.974l-2.191,3.227v.734Zm0-.82h-1.2l.915-1.384a3.7,3.7,0,0,0,.3-.547h.026c0,.038-.015.183-.026.47-.011.251-.018.463-.018.615v.846Z" transform="translate(183 32.133)"/>
-  </g>
-</svg>

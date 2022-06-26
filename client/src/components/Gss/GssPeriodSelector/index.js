@@ -1,1 +1,0 @@
-export { GssPeriodSelector } from './GssPeriodSelector';

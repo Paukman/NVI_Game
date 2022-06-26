@@ -1,1 +1,0 @@
-export { SPPeriodSelector } from './SPPeriodSelector';

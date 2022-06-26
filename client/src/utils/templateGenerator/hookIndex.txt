@@ -1,1 +1,0 @@
-export { use{{moduleNameCaps}} } from './use{{moduleNameCaps}}';

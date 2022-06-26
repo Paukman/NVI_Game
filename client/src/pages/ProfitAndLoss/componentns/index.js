@@ -1,1 +1,0 @@
-export { PnLViewTable } from './PnLViewTable';
